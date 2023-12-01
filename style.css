@@ -1,0 +1,317 @@
+/* Dracula theme */
+:root {
+  --gradient-dir1: to top;
+  --gradient-dir2: to right;
+  --gradient-dir3: to left;
+  --gradient-dir4: to left;
+  --gradient-dir5: to top left;
+  --gradient-dir6: to left top;
+  --size: 5px;
+  --border-size: 2.5px;
+  --gradient-primary: #fcb564, #ff65f2, #d66efd;
+  --gradient-secondary: linear-gradient(245deg, #fcb564, #ff65f2);
+}
+
+* {
+  font-weight: 100;
+  font-family: "SF Mono";
+}
+
+.mtk10,
+.mtk15 {
+  color: transparent;
+  background-image: linear-gradient(var(--gradient-dir4), #fc806c, #ff1bd1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tabs-container>.tab {
+  border-radius: 0;
+  border-radius: 50px;
+  opacity: 0.5;
+  box-shadow: inset 0 -7px 11px #8a2dc033;
+}
+
+.tabs-container>.tab.active {
+  box-shadow: inset 0 -7px 11px #8a2dc033;
+  border-top-width: 1px;
+  opacity: 1;
+}
+
+/* SYNTH WAVE ORIGINAL STYLES */
+
+/* Active dots */
+.monaco-workbench .activitybar>.content .monaco-action-bar .badge .badge-content {
+  background: linear-gradient(45deg, #fc28a8, #03edf9) !important;
+}
+
+/* Active sidebar item */
+
+/* CodingPhase settings */
+.editor-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.editor-group-container:after {
+  content: '';
+  height: 300px;
+  width: 100%;
+  display: block;
+  background-image: linear-gradient(90deg, rgba(252, 25, 154, .1) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(0deg, rgba(252, 25, 154, .1) 1px, rgba(0, 0, 0, 0) 1px);
+  background-position: bottom;
+  background-repeat: repeat;
+  background-size: 20px 20px;
+  left: -25px;
+  position: absolute;
+  pointer-events: none;
+  bottom: 0;
+  transform: perspective(100px) rotateX(60deg);
+  z-index: 0;
+}
+
+.editor-group-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* .monaco-editor > .overflow-guard > .monaco-scrollable-element:before { */
+.monaco-editor:before,
+.editor-group-container:before {
+  background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 2px, #FFF 2px, #FFF 4px);
+  background-size: 100% 4px cover;
+  transform-origin: 50% 50%;
+  content: '';
+  opacity: 0.02;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.editor-group-container:after {
+  animation: flight 2s infinite linear;
+}
+
+
+canvas {
+  z-index: 2;
+}
+
+.monaco-editor .line-numbers.active-line-number {
+  color: #20e3b2;
+  text-shadow: 0 0 2px #4dd78a;
+}
+
+/* update lightbulb to be neon */
+.monaco-editor .cursor {
+  background: linear-gradient(to bottom, #8a2dc0, #fc28a8);
+  box-shadow: 0 0 5px #fc199a;
+  border-color: #8a2dc0;
+  color: #241b2f;
+}
+
+.monaco-inputbox>.wrapper>textarea.input::selection {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.monaco-editor .line-numbers {
+  color: #8a2dc066;
+  text-shadow: 0 0 2px #393a33, 0 0 35px #ffffff44, 0 0 10px #8a2dc066, 0 0 2px #8a2dc066;
+}
+
+.monaco-list-row.focused,
+.monaco-list-row.selected {
+  background-color: #8a2dc033 !important;
+}
+
+.explorer-folders-view span[title~="emphasized"],
+.monaco-icon-label[title~="emphasized"]::after {
+  color: #fc199a;
+}
+
+.explorer-folders-view span[title~="problems"],
+.monaco-icon-label[title~="problems"]::after {
+  color: #ffcc00;
+}
+
+.vs-dark .monaco-scrollable-element>.scrollbar>.slider {
+  background: rgb(153, 99, 255);
+  opacity: 0.5;
+}
+
+/* tooltips */
+.monaco-editor .monaco-hover {
+  background-color: #262335;
+  display: block !important;
+  padding: 20px;
+  transition: opacity 1s !important;
+  opacity: 1;
+  animation: tooltippulse 4s infinite linear;
+}
+
+.monaco-editor .monaco-hover.hidden {
+  opacity: 0;
+}
+
+@keyframes tooltippulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 242, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 85px 0 rgba(0, 217, 255, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 242, 0);
+  }
+}
+
+.monaco-editor .monaco-hover::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-size: 200% 200%;
+  width: 100%;
+  background-image: linear-gradient(to right, #fc28a8, #03edf9, #fc28a8, #03edf9, #fc28a8);
+
+  animation: neonline 2s infinite;
+}
+
+@keyframes neonline {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.monaco-editor .cursor {
+  box-shadow: 0 0 15px 2px #00c3ff;
+  animation: cursor 1s infinite linear;
+}
+
+@keyframes colapse {
+  0% {
+    background-color: yellow;
+    box-shadow: 0 0 5px 0 yellow;
+  }
+
+  70% {
+    background-color: yellow;
+    box-shadow: 0 0 35px 10px yellow;
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes cursor {
+  0% {
+    box-shadow: 0 0 5px 0 #00c3ff;
+  }
+
+  100% {
+    box-shadow: 0 0 35px 5px #00c3ff;
+  }
+}
+
+@keyframes flight {
+  0% {
+    transform: perspective(100px) rotateX(60deg) translateY(0px);
+  }
+
+  100% {
+    transform: perspective(100px) rotateX(60deg) translateY(20px);
+  }
+}
+
+@keyframes cnt {
+  0% {
+    bottom: 150px;
+    font-size: 0.1em;
+    color: #fc28a822;
+    text-shadow: 0 0 5px #fc28a811;
+  }
+
+  100% {
+    bottom: -400px;
+    font-size: 20em;
+    color: #fc28a855;
+    text-shadow: 0 0 30px #fc28a8;
+  }
+}
+
+.tab-border-top-container {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 3px;
+  width: calc(100% - 6px) !important;
+  height: calc(100% - 6px) !important;
+  background-color: transparent !important;
+  display: flex;
+  opacity: 1;
+}
+
+.tab-border-top-container {
+  border-radius: 20px;
+}
+
+.tab-border-top-container:before {
+  content: "";
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  animation: spinner 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  background: conic-gradient(from 0deg at 50% 51.35%,
+      rgba(185, 215, 243, 0) 0deg,
+      rgba(185, 215, 243, 0) 289.4deg,
+      #ffb86c 318.05deg,
+      #ff65f2 1turn),
+    conic-gradient(from 180deg at 50% 51.35%,
+      rgba(185, 215, 243, 0) 0deg,
+      rgba(185, 215, 243, 0) 287.46deg,
+      #20e3b2 325.02deg,
+      #00aefd 1turn);
+}
+
+@keyframes spinner {
+  100% {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
+
+.tab-border-top-container {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 3px;
+  width: calc(100% - 6px) !important;
+  height: calc(100% - 6px) !important;
+  background-color: transparent !important;
+  display: flex;
+  opacity: 1;
+}
+
+.monaco-list-row.focused.selected {
+  border-radius: 20px;
+  box-shadow: inset 0 -7px 11px #8a2dc033;
+}
